@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>task CRUD</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+
+<body>
+    <div id="taskCrud">
+        <div>
+            <form action="javascript:void(0);" onsubmit="logOut()">
+                <input type="submit" value="logOut">
+            </form>
+        </div>
+        <div class="postman-run-button"
+        data-postman-action="collection/fork"
+        data-postman-visibility="public"
+        data-postman-var-1="31312755-2607fc6f-5670-4641-bec7-d06d89d995d7"
+        data-postman-collection-url="entityId=31312755-2607fc6f-5670-4641-bec7-d06d89d995d7&entityType=collection&workspaceId=3364f61b-2682-4838-bcd6-7f0af7c05247"></div>
+        <script type="text/javascript">
+          (function (p,o,s,t,m,a,n) {
+            !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+            !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+              (n = o.createElement("script")),
+              (n.id = s+t), (n.async = 1), (n.src = m), n
+            ));
+          }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+        </script>
+    </div>
+
+    <h1>task CRUD</h1>
+    <div id="taskCrud">
+        <div>
+            <h3>Add</h3>
+            <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                <input type="text" id="add-name" placeholder="New Task">
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+
+        <div id="editForm">
+            <h3>Edit</h3>
+            <form action="javascript:void(0);">
+                <input type="checkbox" id="edit-isDone">
+                <input type="text" id="edit-name">
+                <input type="submit" value="Save" id="save">
+                <a aria-label="Close">&#10006;</a>
+
+            </form>
+        </div>
+        <div>
+            <b id="counter"></b>
+
+            <table>
+                <tr>
+                    <th>Status</th>
+                    <th>Id</th>
+                    <th></th>
+                    <th></th>
+                    <th>Name</th>
+                </tr>
+                <tbody id="tasks"></tbody>
+            </table>
+        </div>
+        <div>
+            <h3>GetById</h3>
+            <form action="javascript:void(0);" method="POST" onsubmit="getItemById()">
+                <input type="text" id="get-item" placeholder="item id">
+                <input type="submit" value="get">
+            </form>
+            <tr>
+                <h2 id="name"></h2>
+                <h2 id="isDone"></h2>
+            </tr>
+        </div>
+    </div>
+
+
+
+
+    <h1>user CRUD</h1>
+    <div id="manager">
+        <div>
+            <h3>GetAllUsers</h3>
+            <form action="javascript:void(0);" method="GET" onsubmit="getAllUsers()">
+                <input type="submit" value="getAllUsers">
+            </form>
+            <table class="tbl">
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="Users"></tbody>
+            </table>
+        </div>
+        <div>
+            <h3>GetMyUser</h3>
+            <form action="javascript:void(0);" method="GET" onsubmit="getMyUser()">
+                <input type="submit" value="getMyUser">
+            </form>
+            <table id="tbl">
+            </table>
+        </div>
+        <div>
+            <h3>AddNewUser</h3>
+            <form action="javascript:void(0);" method="POST" onsubmit="addUser()">
+                <input type="text" id="add-user-name" placeholder="enter new user">
+                <input type="password" id="add-password" placeholder="enter new password">
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>
